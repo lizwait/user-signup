@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type = "text/css">
+      .error {color: red;} 
+      body {background-color: #264653; color: #51D6FF; font-family: Arial, Helvetica, sans-serif;} h1{color:#2A9D8F; font-family: Arial, Helvetica, sans-serif;}
+      input {background-color: #ADFCF9;}
+      #submit {background-color:#EF476F;}
+    </style>
+  </head>
+  <body>
+    <h1>User Sign-Up</h1>
+    Username: {{userName}}<br>
+    Pass1: {{passwordError1}}<br>
+    Pass2: {{passwordError2}}<br>
+    Email: {{userEmail}}
+
+    <form method='POST'>
+      <label for = username>Username
+          <input name="user-name" type="text" value="{{userName}}"/>
+          <span class="error">{{username_error}}</span>
+      </label>
+      <br>
+      <label for = password>Password
+          <input name="user-password1" type="password" />
+          <span class="error">{{password_error1}}</span>
+      </label>
+      <br>
+      <label for = password>Verify Password
+          <input name="user-password2" type="password" />
+          <span class="error">{{password_error2}}</span>
+      </label>
+      <br>
+      <label for = email>Email
+          <input name="user-email" type="text" value="{{userEmail}}"/>
+          <span class="error">{{email_error}}</span>
+      </label>
+      <br>
+      <input id = "submit" type="submit" />
+    </form>
+  </body>
+</html>
